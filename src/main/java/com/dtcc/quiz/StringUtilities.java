@@ -42,7 +42,6 @@ public class StringUtilities {
     	int midChar = word.length()/2;
     	
         return word.charAt(midChar);
-
     }
 
     /**
@@ -65,6 +64,5 @@ public class StringUtilities {
     public String getLastWord(String sentence) {
     	 String[] strArray=sentence.split(" ");
          return strArray[strArray.length-1];
-    	
      }
 }
