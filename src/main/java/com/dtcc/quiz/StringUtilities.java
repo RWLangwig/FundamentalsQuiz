@@ -51,8 +51,8 @@ public class StringUtilities {
      */
     
     public String removeCharacter(String value, Character charToRemove) {
-    	
-      	String newValue = value.replace(charToRemove,  ' ');
+
+      	String newValue = value.replace(String.valueOf (charToRemove),  "");
       	return newValue;
     }
 

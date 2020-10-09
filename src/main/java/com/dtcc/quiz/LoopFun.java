@@ -26,12 +26,11 @@ public class LoopFun {
      */
     
     public String acronym(String phrase) {
-     	   String acronym = "";
-    	   for(char c : phrase.toCharArray()) 
-    		   if(Character.isUpperCase(c))
-   			acronym += c;
-    			
-       return acronym;
+        String strAcro="";
+        for(String newAcro:phrase.split(" "))
+            strAcro += newAcro.charAt(0);
+        return strAcro.toUpperCase();
+
     }
 
     /**
@@ -48,27 +47,25 @@ public class LoopFun {
      */
 
     public String encrypt(String word) {
-    	int j = 0;
-    	String newEncrypt = ""; 
-    	
-    	for(int i=0; i < word.length();i++){
-    		j = (int)(word.charAt(i));
-    		
-    		//Less then x check
-    		if((j >= 65 && j <= 87)
-    		  ||(j >= 97 && j <=119));
-    			newEncrypt += (char)(j + 3);
-    			
-    		//Greater than = x check
-    		if((j >= 88 && j <= 90)
-    		  ||(j >= 120 && j <=122));
-    			j -= 23; 			
+        int j = 0;
+        String newEncrypt = "";
 
-            }    		
-    		//Encrypted string
+        for(int i=0; i < word.length();i++){
+            j = (int)(word.charAt(i));
+
+            //Less then x check
+            if((j >= 65 && j <= 87)
+                    ||(j >= 97 && j <=119));
+            newEncrypt += (char)(j + 3);
+
+            //Greater than = x check
+            if((j >= 88 && j <= 90)
+                    ||(j >= 120 && j <=122));
+            j -= 23;
+
+        }
+        //Encrypted string
         return newEncrypt;
-   
-}
-}
 
-
+    }
+}
